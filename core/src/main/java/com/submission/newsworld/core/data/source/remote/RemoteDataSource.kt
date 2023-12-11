@@ -11,11 +11,6 @@ import kotlinx.coroutines.flow.flowOn
 
 class RemoteDataSource(private val apiService: ApiService){
 
-    companion object {
-        @Volatile
-        private var instance: RemoteDataSource? = null
-
-    }
 
     fun getAllNews(): Flow<ApiResponse<List<PostsItem>>> {
         //get data from remote api

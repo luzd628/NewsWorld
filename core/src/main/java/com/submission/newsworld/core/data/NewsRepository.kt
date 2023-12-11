@@ -26,7 +26,7 @@ class NewsRepository(
             }
 
             override fun shouldFetch(data: List<News>?): Boolean =
-                data == null || data.isEmpty()
+                data.isNullOrEmpty()
 
             override suspend fun createCall(): Flow<ApiResponse<List<PostsItem>>> =
                 remoteDataSource.getAllNews()

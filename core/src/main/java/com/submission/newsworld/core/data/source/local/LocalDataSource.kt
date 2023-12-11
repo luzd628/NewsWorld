@@ -6,11 +6,6 @@ import kotlinx.coroutines.flow.Flow
 
 class LocalDataSource(private val newsDao: NewsDao){
 
-    companion object {
-        private var instance: LocalDataSource? = null
-
-    }
-
     fun getAllNews(): Flow<List<NewsEntity>> = newsDao.getAllNews()
 
     fun getFavoriteNews(): Flow<List<NewsEntity>> = newsDao.getFavoriteNews()

@@ -1,4 +1,3 @@
-import android.databinding.tool.writer.ViewBinding
 
 plugins {
     id("com.android.application")
